@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">NYTimesPopular</string>
+    <string name="alert_internet">Kindly connect to a stable internet connection and retry</string>
+    <string name="unauthorized_error">You are not authenticated for access this functionality</string>
+    <string name="internal_server_error">Something went wrong on our end. We are looking into it.</string>
+    <string name="unidentified_network_error">Something went wrong on our end. We will soon fix it.</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

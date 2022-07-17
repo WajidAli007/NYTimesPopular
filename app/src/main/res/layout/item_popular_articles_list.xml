@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/_70sdp"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivArticleIcon"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:srcCompat="@color/black"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            app:layout_constraintTop_toTopOf="@id/tvPopularArticleTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tvArticleAuthors"
+            android:layout_marginStart="@dimen/_8sdp"
+            />
+
+        <TextView
+            android:id="@+id/tvPopularArticleTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16ssp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/black_white_text_color"
+            android:text="Supporter of the democratic candidate Jon Ossoff after his something something"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivArticleIcon"
+            app:layout_constraintEnd_toStartOf="@+id/ivForward"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            />
+
+        <TextView
+            android:id="@+id/tvArticleAuthors"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="By David LeonHardDT and Stuart A. Thompson"
+            app:layout_constraintStart_toStartOf="@+id/tvPopularArticleTitle"
+            app:layout_constraintEnd_toEndOf="@+id/tvPopularArticleTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvPopularArticleTitle"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDatePublished"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="2017-06-23"
+            android:textSize="@dimen/_14ssp"
+            android:drawablePadding="@dimen/_4sdp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvArticleAuthors"
+            app:layout_constraintTop_toBottomOf="@+id/tvArticleAuthors"
+            android:drawableStart="@drawable/ic_baseline_perm_contact_calendar_24"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+            app:layout_constraintTop_toTopOf="@id/ivArticleIcon"
+            app:layout_constraintBottom_toBottomOf="@id/ivArticleIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_4sdp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

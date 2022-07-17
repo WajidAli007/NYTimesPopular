@@ -3,6 +3,7 @@ package com.wajid.nytimespopular
 import android.app.Application
 import com.wajid.nytimespopular.di.appModule
 import com.wajid.nytimespopular.di.networkServicesModule
+import com.wajid.nytimespopular.di.reposModule
 import com.wajid.nytimespopular.di.viewModelsModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -48,6 +49,7 @@ class App : Application() {
             modules(
                 appModule,
                 viewModelsModules,
+                reposModule,
                 networkServicesModule
             )
         }

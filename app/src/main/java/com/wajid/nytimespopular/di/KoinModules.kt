@@ -1,6 +1,7 @@
 package com.wajid.nytimespopular.di
 
 import com.wajid.nytimespopular.BuildConfig
+import com.wajid.nytimespopular.repos.NYPopularRepo
 import com.wajid.nytimespopular.ui.main.MainActivityViewModel
 import com.wajid.nytimespopular.utils.ConnectivityUtil
 import com.wajid.nytimespopular.utils.ConnectivityUtilImpl
@@ -39,6 +40,15 @@ val viewModelsModules = module {
  */
 val networkServicesModule = module {
     factory { provideGithubSearchService(get()) }
+}
+
+/**
+ * repos providers
+ */
+val reposModule = module {
+    factory {
+        NYPopularRepo(get())
+    }
 }
 
 /**
