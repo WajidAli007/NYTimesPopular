@@ -3,6 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+def apikeyPropertiesFile = rootProject.file("apikeys.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+
 android {
     compileSdk 32
 
@@ -16,15 +20,22 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
     buildTypes {
         debug {
             minifyEnabled false
             buildConfigField 'String', 'BASE_URL', '"https://api.nytimes.com/"'
+            buildConfigField 'String', 'API_KEY', apikeyProperties['NYTimesApiKey']
         }
 
         release {
             minifyEnabled false
             buildConfigField 'String', 'BASE_URL', '"https://api.nytimes.com/"'
+            buildConfigField 'String', 'API_KEY', apikeyProperties['NYTimesApiKey']
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
