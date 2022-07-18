@@ -1,4 +1,4 @@
-# _SadaPay TakeHome Exercise_
+# _TakeHome Exercise_
 This repo is meant for test purpose only. Its a take home exercise for an online hiring process.
 
 ### _Tech Stack of the Project_
