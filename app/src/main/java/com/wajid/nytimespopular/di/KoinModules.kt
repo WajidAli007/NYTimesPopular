@@ -39,7 +39,7 @@ val viewModelsModules = module {
  * all network services will be provided from this module
  */
 val networkServicesModule = module {
-    factory { provideGithubSearchService(get()) }
+    factory { provideNYTimesPopularService(get()) }
 }
 
 /**
